@@ -1,0 +1,22 @@
+{
+  "name": "panoram",
+  "version": "0.0.1",
+  "description": "panoram",
+  "main": "index.js",
+  "scripts": {
+    "start": "HOST=10.0.2.15 PORT=3000 webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Zatsepin <denis@zatsepin.spb.ru>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.22.0",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.2",
+    "image-webpack-loader": "^1.6.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
