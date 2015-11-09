@@ -14,18 +14,23 @@ module.exports = {
   },
   module: {
     loaders: [
-    {
-      test: /\.css$/,
-      loaders: ['style', 'css'],
-      include: APP_PATH
-    },
-    {
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      loaders: [
-        'file?hash=sha512&digest=hex&name=[hash].[ext]',
-        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-      ]
-    }
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css'],
+        include: APP_PATH
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loaders: ['react-hot', 'babel']
+      }
     ]
   },
   devServer: {
